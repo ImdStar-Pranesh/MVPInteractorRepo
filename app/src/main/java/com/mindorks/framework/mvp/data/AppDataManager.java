@@ -33,6 +33,7 @@ import com.mindorks.framework.mvp.data.network.model.LoginRequest;
 import com.mindorks.framework.mvp.data.network.model.LoginResponse;
 import com.mindorks.framework.mvp.data.network.model.LogoutResponse;
 import com.mindorks.framework.mvp.data.network.model.OpenSourceResponse;
+import com.mindorks.framework.mvp.data.network.model.Users;
 import com.mindorks.framework.mvp.data.prefs.PreferencesHelper;
 import com.mindorks.framework.mvp.di.ApplicationContext;
 import com.mindorks.framework.mvp.utils.AppConstants;
@@ -306,5 +307,10 @@ public class AppDataManager implements DataManager {
     @Override
     public Single<OpenSourceResponse> getOpenSourceApiCall() {
         return mApiHelper.getOpenSourceApiCall();
+    }
+
+    @Override
+    public Single<List<Users>> getUserList() {
+        return mApiHelper.getUserList();
     }
 }

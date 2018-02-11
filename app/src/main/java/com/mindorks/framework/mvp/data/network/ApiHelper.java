@@ -20,6 +20,9 @@ import com.mindorks.framework.mvp.data.network.model.LoginRequest;
 import com.mindorks.framework.mvp.data.network.model.LoginResponse;
 import com.mindorks.framework.mvp.data.network.model.LogoutResponse;
 import com.mindorks.framework.mvp.data.network.model.OpenSourceResponse;
+import com.mindorks.framework.mvp.data.network.model.Users;
+
+import java.util.List;
 
 import io.reactivex.Single;
 
@@ -42,4 +45,6 @@ public interface ApiHelper {
     Single<BlogResponse> getBlogApiCall();
 
     Single<OpenSourceResponse> getOpenSourceApiCall();
+
+    Single<List<Users>> getUserList();
 }

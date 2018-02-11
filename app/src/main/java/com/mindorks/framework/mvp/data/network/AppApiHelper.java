@@ -20,7 +20,10 @@ import com.mindorks.framework.mvp.data.network.model.LoginRequest;
 import com.mindorks.framework.mvp.data.network.model.LoginResponse;
 import com.mindorks.framework.mvp.data.network.model.LogoutResponse;
 import com.mindorks.framework.mvp.data.network.model.OpenSourceResponse;
+import com.mindorks.framework.mvp.data.network.model.Users;
 import com.rx2androidnetworking.Rx2AndroidNetworking;
+
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -98,6 +101,14 @@ public class AppApiHelper implements ApiHelper {
                 .addHeaders(mApiHeader.getProtectedApiHeader())
                 .build()
                 .getObjectSingle(OpenSourceResponse.class);
+    }
+
+    @Override
+    public Single<List<Users>> getUserList() {
+        return Rx2AndroidNetworking.get(ApiEndPoint.ENDPOINT_USER_SOURCE)
+                .addHeaders(mApiHeader.getProtectedApiHeader())
+                .build()
+                .getObjectListSingle(Users.class);
     }
 }
 

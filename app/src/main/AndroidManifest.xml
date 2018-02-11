@@ -44,6 +44,13 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
+
+        <activity
+            android:name="com.mindorks.framework.mvp.ui.user.UserActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
         <activity
             android:name="com.mindorks.framework.mvp.ui.main.MainActivity"
             android:launchMode="singleTop"

@@ -24,6 +24,7 @@ import android.widget.EditText;
 import com.mindorks.framework.mvp.R;
 import com.mindorks.framework.mvp.ui.base.BaseActivity;
 import com.mindorks.framework.mvp.ui.main.MainActivity;
+import com.mindorks.framework.mvp.ui.user.UserActivity;
 
 import javax.inject.Inject;
 
@@ -48,7 +49,8 @@ public class LoginActivity extends BaseActivity implements LoginMvpView {
     EditText mPasswordEditText;
 
     public static Intent getStartIntent(Context context) {
-        Intent intent = new Intent(context, LoginActivity.class);
+        //Intent intent = new Intent(context, LoginActivity.class);
+        Intent intent = new Intent(context, UserActivity.class);
         return intent;
     }
 

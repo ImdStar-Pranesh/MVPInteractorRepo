@@ -25,6 +25,7 @@ import com.mindorks.framework.mvp.ui.login.LoginActivity;
 import com.mindorks.framework.mvp.ui.main.MainActivity;
 import com.mindorks.framework.mvp.ui.main.rating.RateUsDialog;
 import com.mindorks.framework.mvp.ui.splash.SplashActivity;
+import com.mindorks.framework.mvp.ui.user.UserActivity;
 
 import dagger.Component;
 
@@ -52,4 +53,5 @@ public interface ActivityComponent {
 
     void inject(RateUsDialog dialog);
 
+    void inject(UserActivity userActivity);
 }

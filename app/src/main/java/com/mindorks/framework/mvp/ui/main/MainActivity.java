@@ -46,6 +46,7 @@ import com.mindorks.framework.mvp.ui.custom.RoundedImageView;
 import com.mindorks.framework.mvp.ui.feed.FeedActivity;
 import com.mindorks.framework.mvp.ui.login.LoginActivity;
 import com.mindorks.framework.mvp.ui.main.rating.RateUsDialog;
+import com.mindorks.framework.mvp.ui.user.UserActivity;
 import com.mindorks.framework.mvp.utils.ScreenUtils;
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
@@ -91,7 +92,8 @@ public class MainActivity extends BaseActivity implements MainMvpView {
     private ActionBarDrawerToggle mDrawerToggle;
 
     public static Intent getStartIntent(Context context) {
-        Intent intent = new Intent(context, MainActivity.class);
+        //Intent intent = new Intent(context, MainActivity.class);
+        Intent intent = new Intent(context, UserActivity.class);
         return intent;
     }
 

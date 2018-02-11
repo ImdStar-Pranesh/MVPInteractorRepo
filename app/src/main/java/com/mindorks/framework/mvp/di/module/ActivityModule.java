@@ -50,6 +50,9 @@ import com.mindorks.framework.mvp.ui.main.rating.RatingDialogPresenter;
 import com.mindorks.framework.mvp.ui.splash.SplashMvpPresenter;
 import com.mindorks.framework.mvp.ui.splash.SplashMvpView;
 import com.mindorks.framework.mvp.ui.splash.SplashPresenter;
+import com.mindorks.framework.mvp.ui.user.UserMvpPresenter;
+import com.mindorks.framework.mvp.ui.user.UserMvpView;
+import com.mindorks.framework.mvp.ui.user.UserPresenter;
 import com.mindorks.framework.mvp.utils.rx.AppSchedulerProvider;
 import com.mindorks.framework.mvp.utils.rx.SchedulerProvider;
 
@@ -100,6 +103,16 @@ public class ActivityModule {
         return presenter;
     }
 
+/*
+    @Provides
+    @PerActivity
+    UserMvpPresenter<UserMvpView> provideUserPresenter(
+            UserMvpPresenter<UserMvpView> presenter) {
+        return presenter;
+    }
+*/
+
+
     @Provides
     AboutMvpPresenter<AboutMvpView> provideAboutPresenter(
             AboutPresenter<AboutMvpView> presenter) {
@@ -110,6 +123,12 @@ public class ActivityModule {
     @PerActivity
     LoginMvpPresenter<LoginMvpView> provideLoginPresenter(
             LoginPresenter<LoginMvpView> presenter) {
+        return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    UserMvpPresenter<UserMvpView> provideUserPresenter(UserPresenter<UserMvpView> presenter) {
         return presenter;
     }
 
